@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailMart Analytics Dashboard</title>
+    <link rel="stylesheet" href="04_dashboard/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🏪 RetailMart Analytics Dashboard</h1>
+        <p>Real-time Business Intelligence | Last updated: <span id="last-updated"></span></p>
+    </header>
+
+    <main>
+        <!-- KPI Cards Section -->
+        <section class="kpi-section">
+            <h2>📊 Key Metrics Overview</h2>
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-content">
+                        <h3>Total Revenue</h3>
+                        <p class="kpi-value" id="total-revenue">Loading...</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">📦</div>
+                    <div class="kpi-content">
+                        <h3>Total Orders</h3>
+                        <p class="kpi-value" id="total-orders">Loading...</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">👥</div>
+                    <div class="kpi-content">
+                        <h3>Total Customers</h3>
+                        <p class="kpi-value" id="total-customers">Loading...</p>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🛒</div>
+                    <div class="kpi-content">
+                        <h3>Avg Order Value</h3>
+                        <p class="kpi-value" id="avg-order-value">Loading...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <h2>📈 Analytics Charts</h2>
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Monthly Revenue Trend</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Sales by Category</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Customer Segments</h3>
+                    <canvas id="segmentChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Top 10 Products</h3>
+                    <canvas id="productsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Performance Table -->
+        <section class="table-section">
+            <h2>🏪 Store Performance</h2>
+            <div class="table-container">
+                <table id="store-table">
+                    <thead>
+                        <tr>
+                            <th>Store</th>
+                            <th>City</th>
+                            <th>Region</th>
+                            <th>Revenue</th>
+                            <th>Orders</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with PostgreSQL & Chart.js | AccioJob SQL Bootcamp Project</p>
+    </footer>
+
+    <script src="04_dashboard/js/dashboard.js"></script>
+</body>
+</html>
